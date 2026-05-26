@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="bpaas-design-system" content="brutalist-avantgarde">
+    <meta name="bpaas-design-theme" content="kr-neon-void">
+    <title>교토 사원 공략집 | 헛걸음 치지 말고 이거 봐라 (Kyoto Temple Guide)</title>
+    <meta name="description" content="교토 사원 투어, 빡세게 짰다. 교토의 지뢰 피하고 찐맛집만 공략하는 법. 헛된 예절 다 때려치고, 이거 보고 쌈빡하게 놀고 가라. ">
+    <meta name="keywords" content="교토 사원, 교토 여행, 긴카쿠지, 키요미즈데라, 교토 공략, 일본 여행, 불심 쎈놈들">
+    <link rel="canonical" href="https://example.com/kyoto-temple-guide">
+    <meta property="og:title" content="교토 사원 공략집 | 빡쎈 여행자를 위한 찐가이드">
+    <meta property="og:description" content="교토 사원 투어, 빡세게 짰다. 교토의 지뢰 피하고 찐맛집만 공략하는 법.">
+    <meta property="og:image" content="https://example.com/kyoto-neon.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <style>
+        /* 
+         * DESIGN SYSTEM: Brutalist Avant-Garde (KR-Neon-Void)
+         * 유지보수 불가의 미학. 깨지면 고침.
+         */
+        :root {
+            --void-black: #050505;
+            --neon-purple: #b026ff;
+            --neon-green: #00ff9d;
+            --neon-pink: #ff0055;
+            --text-white: #f0f0f0;
+            --gray-dim: #1a1a1a;
+            --border-thick: 4px solid var(--text-white);
+            --font-main: 'Impact', 'Helvetica Neue', Arial, sans-serif;
+            --font-body: 'Courier New', Courier, monospace;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--void-black);
+            color: var(--text-white);
+            font-family: var(--font-body);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* HEADER & NAV */
+        .header {
+            border-bottom: var(--border-thick);
+            padding: 20px;
+            background: var(--void-black);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-family: var(--font-main);
+            font-size: 2rem;
+            color: var(--neon-green);
+            text-transform: uppercase;
+            letter-spacing: -2px;
+            border: 2px solid var(--neon-green);
+            padding: 5px 15px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-item {
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+            text-transform: uppercase;
+        }
+
+        .nav-item:hover {
+            color: var(--neon-pink);
+            text-decoration: underline;
+        }
+
+        /* MAIN CONTENT */
+        .main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .section-title {
+            font-family: var(--font-main);
+            font-size: clamp(2.5rem, 5vw, 5rem);
+            line-height: 0.9;
+            margin-bottom: 40px;
+            color: var(--neon-pink);
+            text-transform: uppercase;
+            text-shadow: 4px 4px 0px var(--neon-purple);
+        }
+
+        .content-block {
+            border: var(--border-thick);
+            padding: 30px;
+            margin-bottom: 40px;
+            background: var(--gray-dim);
+            position: relative;
+        }
+
+        .content-block::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            width: 50px;
+            height: 50px;
+            border-top: 4px solid var(--neon-green);
+            border-left: 4px solid var(--neon-green);
+        }
+
+        .hero-text {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            border-left: 10px solid var(--neon-purple);
+            padding-left: 20px;
+        }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .card {
+            border: 2px solid var(--text-white);
+            padding: 20px;
+            transition: transform 0.2s;
+            background: var(--void-black);
+        }
+
+        .card:hover {
+            transform: translate(-5px, -5px);
+            border-color: var(--neon-green);
+            box-shadow: 5px 5px 0px var(--neon-green);
+        }
+
+        .card h3 {
+            font-family: var(--font-main);
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: var(--neon-green);
+        }
+
+        .card p {
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+        }
+
+        .tag {
+            display: inline-block;
+            background: var(--neon-pink);
+            color: var(--void-black);
+            padding: 2px 8px;
+            font-weight: bold;
+            font-size: 0.8rem;
+            margin-bottom: 10px;
+        }
+
+        .faq-section {
+            margin-top: 60px;
+        }
+
+        .faq-item {
+            border-bottom: 2px solid var(--text-white);
+            padding: 20px 0;
+        }
+
+        .faq-question {
+            font-weight: bold;
+            font-size: 1.2rem;
+            color: var(--neon-purple);
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        /* FOOTER */
+        .footer {
+            border-top: var(--border-thick);
+            padding: 40px 20px;
+            margin-top: 60px;
+            text-align: center;
+            background: var(--void-black);
+        }
+
+        .footer p {
+            font-size: 0.8rem;
+            opacity: 0.7;
+        }
+
+        @media (max-width: 768px) {
+            .section-title {
+                font-size: 2.5rem;
+            }
+            .nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+            .card-grid {
+                grid-template-columns: 1fr;
+            }
+            .content-block {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <nav class="nav">
+            <a href="#" class="logo">VOID_KYOTO</a>
+            <div class="nav-links">
+                <a href="#" class="nav-item">공략집</a>
+                <a href="#" class="nav-item">지도</a>
+                <a href="#" class="nav-item">경고</a>
+                <a href="#" class="nav-item">접속</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <section class="hero">
+
+<!-- SEO Visual 1: Kyoto temple 안내 Brutalist Avant-Garde Hero -->
+<div class="seo-visual-hero" role="img" aria-label="신뢰할 수 있는 서비스 — Kyoto Kyoto temple 안내" 
+     style="width:100%;padding:120px 0 60px 0;background:#ffffff;text-align:left;margin:0;position:relative">
+  <div style="max-width:1100px;margin:0 auto;padding:0 24px">
+    <div style="font-family:monospace;font-size:0.75rem;letter-spacing:0.4em;color:#000000;margin-bottom:24px;text-transform:uppercase">/ PERSPECTIVE DECONSTRUCTED</div>
+    <div style="font-size:7.5vw;line-height:0.95;font-weight:900;font-family:serif;color:#000000;letter-spacing:-0.05em;margin:0 0 32px 0;text-transform:uppercase">Kyoto temple 안내</div>
+    <p style="font-size:1.1rem;line-height:1.7;color:#000000;max-width:550px;font-weight:300;margin:0">신뢰할 수 있는 서비스</p>
+  </div>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"ImageObject","name":"Kyoto temple 안내","description":"신뢰할 수 있는 서비스","contentUrl":"data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22/>"}</script>
+</div>
+            <h1 class="section-title">KYOTO TEMPLE<br>NO BULLSHIT GUIDE</h1>
+            <div class="content-block">
+                <p class="hero-text">
+                    "절에 가면 조용히 해야 한다?" <br><br>
+                    그딴 건 네가 만든 헛소리다. 교토는 거대한 테마파크고, 넌 그냥 비싼 표 산 관광객일 뿐이다. 
+                    부처님께 빌 돈도 없으면서 절이나 기웃거리는 너희들을 위해 준비했다.
+                    <strong>헛걸음 치지 말고, 이거 보고 쌈빡하게 놀고 가라.</strong>
+                </p>
+            </div>
+        </section>
+
+<!-- SEO Visual 2: 정보 Brutalist Typography Cards -->
+<div class="seo-visual-cards" role="img" aria-label="Kyoto temple 안내 정보 — 신뢰할 수 있는 서비스" 
+     style="display:flex;flex-direction:column;gap:80px;margin:120px auto;max-width:1100px;padding:0 24px">
+  <div style="display:flex;flex-direction:column;align-items:flex-start;background:transparent;padding:0;border:none;box-shadow:none">
+    <div style="font-family:serif;font-weight:900;font-size:3.5rem;color:#000000;line-height:1;margin-bottom:12px;letter-spacing:-0.03em">01</div>
+    <div style="font-weight:800;font-size:1.6rem;color:#000000;letter-spacing:-0.02em;margin-bottom:8px">특화</div>
+    <div style="font-family:monospace;font-size:0.75rem;letter-spacing:0.2em;color:#666666;text-transform:uppercase">Kyoto temple 안내</div>
+  </div><div style="display:flex;flex-direction:column;align-items:flex-start;background:transparent;padding:0;border:none;box-shadow:none">
+    <div style="font-family:serif;font-weight:900;font-size:3.5rem;color:#000000;line-height:1;margin-bottom:12px;letter-spacing:-0.03em">02</div>
+    <div style="font-weight:800;font-size:1.6rem;color:#000000;letter-spacing:-0.02em;margin-bottom:8px">다수 실적</div>
+    <div style="font-family:monospace;font-size:0.75rem;letter-spacing:0.2em;color:#666666;text-transform:uppercase">Kyoto temple 안내</div>
+  </div><div style="display:flex;flex-direction:column;align-items:flex-start;background:transparent;padding:0;border:none;box-shadow:none">
+    <div style="font-family:serif;font-weight:900;font-size:3.5rem;color:#000000;line-height:1;margin-bottom:12px;letter-spacing:-0.03em">03</div>
+    <div style="font-weight:800;font-size:1.6rem;color:#000000;letter-spacing:-0.02em;margin-bottom:8px">고품질</div>
+    <div style="font-family:monospace;font-size:0.75rem;letter-spacing:0.2em;color:#666666;text-transform:uppercase">Kyoto temple 안내</div>
+  </div>
+</div>
+
+        <section class="spots">
+            <h2 style="font-family: var(--font-main); font-size: 3rem; margin-bottom: 20px; color: var(--text-white);">찐맛집 TOP 3</h2>
+            <div class="card-grid">
+                <!-- Card 1 -->
+                <article class="card">
+                    <span class="tag">필수 코스</span>
+                    <h3>키요미즈데라</h3>
+                    <p><strong>한마디:</strong> 사람이 개미떼다.</p>
+                    <p>일명 '물 무대'. 여기서 도약하면 소원이 이루어진다는데, 넌 그냥 다리나 안 부러지게 다녀라. 해 질 녘에 가면 인파 지옥을 체험할 수 있다. 인생샷 건지려면 부지런히 떨어.</p>
+                    <p style="color: var(--neon-green); font-weight: bold;">Tip: 아침 6 시에 가라. 안 그럼 후회함.</p>
+                </article>
+
+                <!-- Card 2 -->
+                <article class="card">
+                    <span class="tag">금광 찬란</span>
+                    <h3>긴카쿠지 (금각사)</h3>
+                    <p><strong>한마디:</strong> 금 덕지덕지 발랐다.</p>
+                    <p>금박이 썩었다는 전설의 그 절. 눈 아프게 반짝거려서 사진 찍으면 보정 필요도 없다. 근데 실물은 좀 작더라? 실망하지 말고 연못이랑 대조해라.</p>
+                    <p style="color: var(--neon-green); font-weight: bold;">Tip: 배경에 사람 안 넣게 줌 땡겨라.</p>
+                </article>
+
+                <!-- Card 3 -->
+                <article class="card">
+                    <span class="tag">대나무숲</span>
+                    <h3>아라시야마</h3>
+                    <p><strong>한마디:</strong> 대나무가 쭉 늘어서 있음.</p>
+                    <p>바람 불면 대나무 소리가 요란함. 그 소리 들으며 명상하면 니 인생의 찌질함도 좀 씻겨나갈 듯? 텐류지사까지 같이 붙어 있음.</p>
+                    <p style="color: var(--neon-green); font-weight: bold;">Tip: 자전거 빌려서 굴리면 빡세.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="faq-section">
+            <h2 style="font-family: var(--font-main); font-size: 3rem; margin-bottom: 20px; color: var(--text-white);">뭘 물어도 됨 (FAQ)</h2>
+            
+            <div class="content-block" style="background: var(--void-black);">
+                <div class="faq-item">
+                    <span class="faq-question">Q. 드레스 코드 같은 거 있음?</span>
+                    <p>A: 빡빡하진 않음. 근데 반바지에 썬글래스에 슬리퍼 차림이면 스님들이 노려봄. 최소한의 예의는 지켜라. 어깨랑 무릎 가려라.</p>
+                </div>
+                <div class="faq-item">
+                    <span class="faq-question">Q. 사진 찍어도 됨?</span>
+                    <p>A: 바깥은 마구마구 찍어라. 근데 본전 (건물 안) 은 썩어 꺼진 카메라나 폰이나 내비두지 마라. 찍히면 욕 쳐먹음. 인장 (스탬프) 찍는 건 괜찮음.</p>
+                </div>
+                <div class="faq-item">
+                    <span class="faq-question">Q. 절 값 (입장료) 은?</span>
+                    <p>A: 대개 400 엔에서 600 엔 사이. 동전 지갑 챙겨라. 만 엔 지폐 내밀면 거스름돈 구경하느라 시간 다 간다.</p>
+                </div>
+            </div>
+        
+<div class="seo-visual-divider" role="separator" aria-label="Kyoto temple 안내 구분선" style="margin:80px 0;height:1px;background:#666666;opacity:0.1"></div>
+</section>
+    </main>
+
+    <footer class="footer">
+        <p>
+            COPYRIGHT © 2024 KYOTO BRUTALIST GUIDE.<br>
+            ALL RIGHTS RESERVED. NO MERCY.<br>
+            <span style="color: var(--neon-purple);">DESIGNED FOR THE BOLD.</span>
+        </p>
+    </footer>
+
+</body>
+</html>

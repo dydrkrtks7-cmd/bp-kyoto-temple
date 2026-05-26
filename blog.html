@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="bpaas-design-system" content="brutalist-avantgarde">
+    <meta name="bpaas-design-theme" content="kr-neon-void">
+    <title>KYOTO TEMPLES: 더 이상 망설이지 마라 (BRO EDITION)</title>
+    <meta name="description" content="교토 사원? 그냥 절이 아니라 영혼 때려맞히는 곳이야. 헷갈리는 거 다 때려치고 여길 봐라. ">
+    <meta name="keywords" content="교토, 사원, 절, 여행, 튜토리얼, 가이드, 교토시절, 킨카쿠지, 기온, 교토여행코스">
+    <link rel="canonical" href="https://example.com">
+    <meta property="og:title" content="교토 사원 공략집: 헷갈리는 거 싹 다 정리">
+    <meta property="og:description" content="사원 (Temple) 이랑 신사 (Shrine) 차이도 모르고 교토 온 거야? 이거 읽고 각성해라.">
+    <meta property="og:image" content="https://example.com/image.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <style>
+        /* [디자인 시스템 재사용: Brutalist Avant-Garde] */
+        :root {
+            --bg-color: #050505;
+            --text-main: #e0e0e0;
+            --accent-color: #ccff00; /* 네온 라임 */
+            --border-thick: 4px solid var(--text-main);
+            --border-thin: 1px solid #333;
+            --font-display: 'Impact', 'Arial Black', sans-serif;
+            --font-body: 'Courier New', Courier, monospace;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: var(--font-body);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        a { color: inherit; text-decoration: none; }
+        ul { list-style: none; }
+
+        .header {
+            border-bottom: var(--border-thick);
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            background: var(--bg-color);
+            z-index: 100;
+        }
+
+        .logo {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            color: var(--accent-color);
+            text-transform: uppercase;
+            letter-spacing: -1px;
+        }
+
+        .nav {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .nav a {
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+
+        .nav a:hover {
+            color: var(--accent-color);
+            text-decoration: underline;
+        }
+
+        .main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+
+        .section {
+            margin-bottom: 4rem;
+            border: 1px solid #333;
+            padding: 2rem;
+            background: #0a0a0a;
+        }
+
+        .section-title {
+            font-family: var(--font-display);
+            font-size: 3rem;
+            color: var(--accent-color);
+            margin-bottom: 1.5rem;
+            line-height: 0.9;
+            text-transform: uppercase;
+        }
+
+        .content-block {
+            margin-bottom: 2rem;
+        }
+
+        .content-block h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            border-left: 4px solid var(--accent-color);
+            padding-left: 1rem;
+        }
+
+        .content-block p {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            color: #ccc;
+        }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .card {
+            border: 2px solid var(--text-main);
+            padding: 1.5rem;
+            transition: transform 0.2s, background 0.2s;
+            position: relative;
+        }
+
+        .card:hover {
+            transform: translate(-4px, -4px);
+            background: #111;
+            box-shadow: 4px 4px 0px var(--accent-color);
+        }
+
+        .card h4 {
+            font-family: var(--font-display);
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: #fff;
+        }
+
+        .card .tag {
+            display: inline-block;
+            background: var(--accent-color);
+            color: #000;
+            padding: 0.2rem 0.6rem;
+            font-weight: bold;
+            font-size: 0.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .faq-item {
+            border-top: 1px solid #333;
+            padding: 1.5rem 0;
+        }
+
+        .faq-item:last-child {
+            border-bottom: 1px solid #333;
+        }
+
+        .faq-question {
+            font-weight: bold;
+            font-size: 1.2rem;
+            color: var(--accent-color);
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .footer {
+            border-top: var(--border-thick);
+            padding: 2rem;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #666;
+            margin-top: 4rem;
+        }
+
+        .highlight {
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            .section-title { font-size: 2rem; }
+            .nav { display: none; } /* 모바일 메뉴 로직은 생략 (디자인 시스템 유지) */
+            .card-grid { grid-template-columns: 1fr; }
+            .header { flex-direction: column; gap: 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo">KYOTO_RAW_DATA</div>
+        <nav class="nav">
+            <a href="#">HOME</a>
+            <a href="#">TEMPLES</a>
+            <a href="#">SHRINES</a>
+            <a href="#">FOOD</a>
+            <a href="#">NIGHTLIFE</a>
+        </nav>
+    </header>
+
+    <main class="main">
+        
+        <!-- 인트로 섹션 -->
+        <section class="section">
+            <h1 class="section-title">사원 (Temple) 이랑<br>신사 (Shrine) 랑<br>구분도 안 돼냐?</h1>
+            <div class="content-block">
+                <p>
+                    야, 들어와라. 문 닫기 전에 확실히 짚고 가자. 
+                    교토 여행 가면 다들 절 (사원) 이랑 신사 구분도 못하고 무작정 절부터 하러 간다. 
+                    <strong>불교 (Buddhism)</strong>랑 <strong>신도 (Shinto)</strong>가 뭔지나 알아? 
+                    불상은 절 (Temple) 에 있고, 토리이 (저 빨간 문) 는 신사 (Shrine) 에 있어. 
+                    이거 헷갈리면 넌 그냥 관광질 한 거야. 오늘 이 글로 각성해라.
+                </p>
+            </div>
+        </section>
+
+<!-- SEO Visual 2: 정보 Brutalist Typography Cards -->
+<div class="seo-visual-cards" role="img" aria-label="Kyoto temple 안내 정보 — 신뢰할 수 있는 서비스" 
+     style="display:flex;flex-direction:column;gap:80px;margin:120px auto;max-width:1100px;padding:0 24px">
+  <div style="display:flex;flex-direction:column;align-items:flex-start;background:transparent;padding:0;border:none;box-shadow:none">
+    <div style="font-family:serif;font-weight:900;font-size:3.5rem;color:#000000;line-height:1;margin-bottom:12px;letter-spacing:-0.03em">01</div>
+    <div style="font-weight:800;font-size:1.6rem;color:#000000;letter-spacing:-0.02em;margin-bottom:8px">특화</div>
+    <div style="font-family:monospace;font-size:0.75rem;letter-spacing:0.2em;color:#666666;text-transform:uppercase">Kyoto temple 안내</div>
+  </div><div style="display:flex;flex-direction:column;align-items:flex-start;background:transparent;padding:0;border:none;box-shadow:none">
+    <div style="font-family:serif;font-weight:900;font-size:3.5rem;color:#000000;line-height:1;margin-bottom:12px;letter-spacing:-0.03em">02</div>
+    <div style="font-weight:800;font-size:1.6rem;color:#000000;letter-spacing:-0.02em;margin-bottom:8px">다수 실적</div>
+    <div style="font-family:monospace;font-size:0.75rem;letter-spacing:0.2em;color:#666666;text-transform:uppercase">Kyoto temple 안내</div>
+  </div><div style="display:flex;flex-direction:column;align-items:flex-start;background:transparent;padding:0;border:none;box-shadow:none">
+    <div style="font-family:serif;font-weight:900;font-size:3.5rem;color:#000000;line-height:1;margin-bottom:12px;letter-spacing:-0.03em">03</div>
+    <div style="font-weight:800;font-size:1.6rem;color:#000000;letter-spacing:-0.02em;margin-bottom:8px">고품질</div>
+    <div style="font-family:monospace;font-size:0.75rem;letter-spacing:0.2em;color:#666666;text-transform:uppercase">Kyoto temple 안내</div>
+  </div>
+</div>
+
+        <!-- 핵심 공략 섹션 -->
+        <section class="section">
+            <h2 class="section-title">THE CORE: <br><span style="color: #fff;">이거 3 개만 알고 가라</span></h2>
+            
+            <div class="card-grid">
+                <!-- 카드 1 -->
+                <article class="card">
+                    <span class="tag">#Buddhism #사원</span>
+                    <h4>킨카쿠지 (Kinkaku-ji)</h4>
+                    <p>일명 금각사. 겉이 죄다 금박이라서 '금각사'야. 교토의 상징이지만, 사실은 절 (사원) 이다. 부처님 모신 곳이니까. 
+                    <br><br>
+                    <strong>[BRO 의 한마디]</strong> 사람이 미어터진다. 아침 일찍 가라. 안 가도 후회지만, 사람에 떠밀려서 간 거랑 내가 간 거는 좀 다르잖아.
+                    </p>
+                </article>
+
+                <!-- 카드 2 -->
+                <article class="card">
+                    <span class="tag">#Shinto #신사</span>
+                    <h4>후시이나리 (Fushimi Inari)</h4>
+                    <p>저기 붉은색 문 (토리이) 이 끝도 없이 이어지는 곳. 여긴 신사다. 여우가 신의 사자야. 
+                    <br><br>
+                    <strong>[BRO 의 한마디]</strong> 산 입구에서 사진만 찍고 도망가지 마라. 산 꼭대기까지 올라가 봐야 진짜 배운다. 다리가 부러져도 올라가라.
+                    </p>
+                </article>
+
+                <!-- 카드 3 -->
+                <article class="card">
+                    <span class="tag">#History #사원</span>
+                    <h4>기요미즈데라 (Kiyomizu-dera)</h4>
+                    <p>청수사. 나무로 지은 저 현관 (무대) 에서 펑 뛰면 죽는다 카더라. 그거 뻥이지만, 경치는 쩐다. 
+                    <br><br>
+                    <strong>[BRO 의 한마디]</strong> 여기도 사람이 미친듯이 많다. 근데 야간 개장 할 때 가면 분위기가 좀 달라.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <!-- 주의사항 섹션 -->
+        <section class="section">
+            <h2 class="section-title">WARNING: <br><span class="highlight">이거 모르면 욕먹는다</span></h2>
+            <div class="content-block">
+                <p>
+                    1. <strong>플래시 금지:</strong> 불상이나 문화재 앞에서 번쩍번쩍 하니까? 야단맞아도 할 말 없다.<br>
+                    2. <strong>조용히 해라:</strong> 여긴 절이지 네 방이 아니야. 통화하면서 돌아다니지 마.<br>
+                    3. <strong>신발:</strong> 집어 신어야 할 때는 벗어. 흙 묻은 신발로 올라타면 큰일 난다.
+                </p>
+            </div>
+        </section>
+
+        <!-- FAQ 섹션 -->
+        <section class="section">
+            <h2 class="section-title">FAQ: <br><span style="color: #fff;">질문이나 받아주지</span></h2>
+            
+            <div class="faq-item">
+                <span class="faq-question">Q. 절 (사원) 이라ᄝ 신사 (신사) 입장료 차이가 있나요?</span>
+                <p>A: 보통은 둘 다 돈 내야 한다. 무료인 곳은 드물어. 싼 거 찾으면 지하철 패스 끊을 때 같이 파는 거 노려라.</p>
+            </div>
+
+            <div class="faq-item">
+                <span class="faq-question">Q. 절에서 절하는 법은?</span>
+                <p>A: 합장 (손 모으기) 하고 고개 숙이면 땡. 너무 복잡하게 생각하지 마라. 진심이 중요하냐?</p>
+            </div>
+
+            <div class="faq-item">
+                <span class="faq-question">Q. 교토 버스 패스 안 사도 돼나요?</span>
+                <p>A: 사원만 갈 거면 사야 해. 안 사면 버스 값만 개고생해서 날린다. 편의점에서 미리 사라.</p>
+            </div>
+        
+<div class="seo-visual-divider" role="separator" aria-label="Kyoto temple 안내 구분선" style="margin:80px 0;height:1px;background:#666666;opacity:0.1"></div>
+</section>
+
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2023 KYOTO_RAW_DATA. DESIGNED IN HELL.</p>
+        <p>NO REFUNDS. NO REGRETS.</p>
+    </footer>
+
+</body>
+</html>
