@@ -1,302 +1,303 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>교토 사원 블로그 | 전문가의 교토 사원 이야기</title>
-    <meta name="description" content="교토 사원 전문가가 전하는 깊이 있는 블로그. 금각사와 청수사의 건축 미학, 용안사의 선종 철학, 교토 사원 방문의 최적 시기와 숨은 명소를 권위 있는 시각으로 해설합니다.">
-    <meta name="keywords" content="Kyoto temple blog, 교토 사원 블로그, 교토 절 이야기, 금각사 역사, 청수사 건축, 용안사 석정, 교토 사원 방문 팁, 교토 여행 블로그">
-    <meta name="bpaas-design-system" content="editorial-apple">
-    <meta name="bpaas-design-theme" content="kr-ivory-ink">
-    <link rel="canonical" href="https://kyoto-travel-local.pbn-builder.xyz/blog.html">
-    <meta property="og:type" content="article">
-    <meta property="og:title" content="Kyoto Temple Guide | 교토 사원 블로그">
-    <style>
-        *, *::before, *::after {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        html {
-            font-size: 16px;
-            scroll-behavior: smooth;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-        }
-        body {
-            font-family: 'Times New Roman', 'Noto Serif KR', Georgia, serif;
-            background-color: #faf8f5;
-            color: #2c2c2c;
-            line-height: 1.8;
-            padding-top: 80px;
-        }
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Times New Roman', 'Noto Serif KR', Georgia, serif;
-            font-weight: 600;
-            letter-spacing: 0.02em;
-            color: #1a1a1a;
-        }
-        h1 {
-            font-size: 2.4rem;
-            line-height: 1.3;
-            margin-bottom: 1.5rem;
-            border-bottom: 2px solid #d4c9b0;
-            padding-bottom: 0.5rem;
-        }
-        h2 {
-            font-size: 1.8rem;
-            margin-top: 2.5rem;
-            margin-bottom: 1rem;
-            color: #3a3a3a;
-        }
-        h3 {
-            font-size: 1.3rem;
-            margin-top: 1.8rem;
-            margin-bottom: 0.8rem;
-            color: #4a4a4a;
-        }
-        p {
-            margin-bottom: 1.2rem;
-            font-size: 1.05rem;
-        }
-        a {
-            color: #8b7a5a;
-            text-decoration: none;
-            border-bottom: 1px solid transparent;
-            transition: border-color 0.3s ease, color 0.3s ease;
-        }
-        a:hover {
-            color: #5c4e36;
-            border-bottom-color: #5c4e36;
-        }
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-        header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            background: rgba(250, 248, 245, 0.97);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            border-bottom: 1px solid #e8e0d0;
-            z-index: 1000;
-            height: 80px;
-        }
-        .header-inner {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 0 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            height: 100%;
-        }
-        .site-title {
-            font-size: 1.4rem;
-            font-weight: 600;
-            letter-spacing: 0.1em;
-            color: #1a1a1a;
-            text-decoration: none;
-            border-bottom: none;
-        }
-        .site-title:hover {
-            border-bottom: none;
-            color: #8b7a5a;
-        }
-        nav {
-            display: flex;
-            align-items: center;
-            gap: 2rem;
-        }
-        nav a {
-            font-size: 0.95rem;
-            font-weight: 500;
-            letter-spacing: 0.05em;
-            color: #3a3a3a;
-            text-decoration: none;
-            border-bottom: none;
-            padding: 0.3rem 0;
-            position: relative;
-            transition: color 0.3s ease;
-        }
-        nav a::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: #8b7a5a;
-            transition: width 0.3s ease;
-        }
-        nav a:hover {
-            color: #8b7a5a;
-            border-bottom: none;
-        }
-        nav a:hover::after {
-            width: 100%;
-        }
-        .hamburger-menu {
-            display: none;
-            background: none;
-            border: none;
-            font-size: 1.8rem;
-            cursor: pointer;
-            color: #2c2c2c;
-            padding: 0.3rem;
-            line-height: 1;
-        }
-        .tel-link {
-            display: inline-block;
-            padding: 0.4rem 1.2rem;
-            background: #8b7a5a;
-            color: #faf8f5;
-            border-radius: 4px;
-            font-size: 0.9rem;
-            font-weight: 500;
-            letter-spacing: 0.03em;
-            transition: background 0.3s ease;
-            text-decoration: none;
-            border-bottom: none;
-        }
-        .tel-link:hover {
-            background: #5c4e36;
-            color: #faf8f5;
-            border-bottom: none;
-        }
-        @media (max-width: 768px) {
-            body {
-                padding-top: 70px;
-            }
-            header {
-                height: 70px;
-            }
-            .header-inner {
-                padding: 0 1.2rem;
-            }
-            .site-title {
-                font-size: 1.2rem;
-            }
-            nav {
-                display: none;
-                position: absolute;
-                top: 70px;
-                left: 0;
-                width: 100%;
-                background: rgba(250, 248, 245, 0.99);
-                flex-direction: column;
-                padding: 1.5rem 1.2rem;
-                gap: 1rem;
-                border-bottom: 1px solid #e8e0d0;
-                box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-            }
-            nav.active {
-                display: flex;
-            }
-            nav a {
-                font-size: 1rem;
-                padding: 0.5rem 0;
-            }
-            .hamburger-menu {
-                display: block;
-            }
-            .tel-link {
-                display: none;
-            }
-            .container {
-                padding: 0 1.2rem;
-            }
-            h1 {
-                font-size: 1.8rem;
-            }
-            h2 {
-                font-size: 1.4rem;
-            }
-        }
-        .blog-header {
-            margin: 3rem 0 2rem;
-            text-align: center;
-        }
-        .blog-header p {
-            font-size: 1.1rem;
-            color: #5c5c5c;
-            max-width: 700px;
-            margin: 0 auto;
-        }
-        .blog-meta {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            font-size: 0.9rem;
-            color: #7a7a7a;
-            margin-bottom: 2rem;
-        }
-        .blog-meta span {
-            display: flex;
-            align-items: center;
-            gap: 0.3rem;
-        }
-        .featured-image {
-            width: 100%;
-            height: 420px;
-            background: linear-gradient(135deg, #d4c9b0 0%, #c4b89a 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 2.5rem;
-            border-radius: 8px;
-            color: #faf8f5;
-            font-size: 1.2rem;
-            letter-spacing: 0.1em;
-        }
-        .blog-content {
-            max-width: 780px;
-            margin: 0 auto;
-        }
-        .blog-content blockquote {
-            border-left: 4px solid #8b7a5a;
-            padding: 1rem 1.5rem;
-            margin: 1.5rem 0;
-            background: #f0ece4;
-            font-style: italic;
-            color: #3a3a3a;
-        }
-        .blog-content ul {
-            margin: 1rem 0 1.5rem 2rem;
-            list-style-type: square;
-        }
-        .blog-content li {
-            margin-bottom: 0.6rem;
-            font-size: 1.05rem;
-        }
-        .blog-footer {
-            margin-top: 3rem;
-            padding-top: 2rem;
-            border-top: 1px solid #e8e0d0;
-            text-align: center;
-            color: #7a7a7a;
-            font-size: 0.9rem;
-        }
-    </style>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>교토 사원 블로그 | 전문가의 교토 사원 이야기</title>
+ <meta name="description" content="교토 사원 전문가가 전하는 깊이 있는 블로그. 금각사와 청수사의 건축 미학, 용안사의 선종 철학, 교토 사원 방문의 최적 시기와 숨은 명소를 권위 있는 시각으로 해설합니다.">
+ <meta name="keywords" content="Kyoto temple blog, 교토 사원 블로그, 교토 절 이야기, 금각사 역사, 청수사 건축, 용안사 석정, 교토 사원 방문 팁, 교토 여행 블로그">
+ <link rel="canonical" href="https://kyoto-travel-local.pbn-builder.xyz/blog.html">
+ <meta property="og:type" content="article">
+ <meta property="og:title" content="교토 사원 블로그 | 전문가의 교토 사원 이야기">
+ <style>
+ *, *::before, *::after {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ }
+ html {
+ font-size: 16px;
+ scroll-behavior: smooth;
+ -webkit-font-smoothing: antialiased;
+ -moz-osx-font-smoothing: grayscale;
+ }
+ body {
+ font-family: 'Times New Roman', 'Noto Serif KR', Georgia, serif;
+ background-color: #faf8f5;
+ color: #2c2c2c;
+ line-height: 1.8;
+ padding-top: 80px;
+ }
+ h1, h2, h3, h4, h5, h6 {
+ font-family: 'Times New Roman', 'Noto Serif KR', Georgia, serif;
+ font-weight: 600;
+ letter-spacing: 0.02em;
+ color: #1a1a1a;
+ }
+ h1 {
+ font-size: 2.4rem;
+ line-height: 1.3;
+ margin-bottom: 1.5rem;
+ border-bottom: 2px solid #d4c9b0;
+ padding-bottom: 0.5rem;
+ }
+ h2 {
+ font-size: 1.8rem;
+ margin-top: 2.5rem;
+ margin-bottom: 1rem;
+ color: #3a3a3a;
+ }
+ h3 {
+ font-size: 1.3rem;
+ margin-top: 1.8rem;
+ margin-bottom: 0.8rem;
+ color: #4a4a4a;
+ }
+ p {
+ margin-bottom: 1.2rem;
+ font-size: 1.05rem;
+ }
+ a {
+ color: #8b7a5a;
+ text-decoration: none;
+ border-bottom: 1px solid transparent;
+ transition: border-color 0.3s ease, color 0.3s ease;
+ }
+ a:hover {
+ color: #5c4e36;
+ border-bottom-color: #5c4e36;
+ }
+ .container {
+ max-width: 1100px;
+ margin: 0 auto;
+ padding: 0 2rem;
+ }
+ header {
+ position: fixed;
+ top: 0;
+ left: 0;
+ width: 100%;
+ background: rgba(250, 248, 245, 0.97);
+ backdrop-filter: blur(10px);
+ -webkit-backdrop-filter: blur(10px);
+ border-bottom: 1px solid #e8e0d0;
+ z-index: 1000;
+ height: 80px;
+ }
+ .header-inner {
+ max-width: 1100px;
+ margin: 0 auto;
+ padding: 0 2rem;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ height: 100%;
+ }
+ .site-title {
+ font-size: 1.4rem;
+ font-weight: 600;
+ letter-spacing: 0.1em;
+ color: #1a1a1a;
+ text-decoration: none;
+ border-bottom: none;
+ }
+ .site-title:hover {
+ border-bottom: none;
+ color: #8b7a5a;
+ }
+ nav {
+ display: flex;
+ align-items: center;
+ gap: 2rem;
+ }
+ nav a {
+ font-size: 0.95rem;
+ font-weight: 500;
+ letter-spacing: 0.05em;
+ color: #3a3a3a;
+ text-decoration: none;
+ border-bottom: none;
+ padding: 0.3rem 0;
+ position: relative;
+ transition: color 0.3s ease;
+ }
+ nav a::after {
+ content: '';
+ position: absolute;
+ bottom: 0;
+ left: 0;
+ width: 0;
+ height: 2px;
+ background: #8b7a5a;
+ transition: width 0.3s ease;
+ }
+ nav a:hover {
+ color: #8b7a5a;
+ border-bottom: none;
+ }
+ nav a:hover::after {
+ width: 100%;
+ }
+ .hamburger-menu {
+ display: none;
+ background: none;
+ border: none;
+ font-size: 1.8rem;
+ cursor: pointer;
+ color: #2c2c2c;
+ padding: 0.3rem;
+ line-height: 1;
+ }
+ .tel-link {
+ display: inline-block;
+ padding: 0.4rem 1.2rem;
+ background: #8b7a5a;
+ color: #faf8f5;
+ border-radius: 4px;
+ font-size: 0.9rem;
+ font-weight: 500;
+ letter-spacing: 0.03em;
+ transition: background 0.3s ease;
+ text-decoration: none;
+ border-bottom: none;
+ }
+ .tel-link:hover {
+ background: #5c4e36;
+ color: #faf8f5;
+ border-bottom: none;
+ }
+ @media (max-width: 768px) {
+ body {
+ padding-top: 70px;
+ }
+ header {
+ height: 70px;
+ }
+ .header-inner {
+ padding: 0 1.2rem;
+ }
+ .site-title {
+ font-size: 1.2rem;
+ }
+ nav {
+ display: none;
+ position: absolute;
+ top: 70px;
+ left: 0;
+ width: 100%;
+ background: rgba(250, 248, 245, 0.99);
+ flex-direction: column;
+ padding: 1.5rem 1.2rem;
+ gap: 1rem;
+ border-bottom: 1px solid #e8e0d0;
+ box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+ }
+ nav.active {
+ display: flex;
+ }
+ nav a {
+ font-size: 1rem;
+ padding: 0.5rem 0;
+ }
+ .hamburger-menu {
+ display: block;
+ }
+ .tel-link {
+ display: none;
+ }
+ .container {
+ padding: 0 1.2rem;
+ }
+ h1 {
+ font-size: 1.8rem;
+ }
+ h2 {
+ font-size: 1.4rem;
+ }
+ }
+ .blog-header {
+ margin: 3rem 0 2rem;
+ text-align: center;
+ }
+ .blog-header p {
+ font-size: 1.1rem;
+ color: #5c5c5c;
+ max-width: 700px;
+ margin: 0 auto;
+ }
+ .blog-meta {
+ display: flex;
+ justify-content: center;
+ gap: 2rem;
+ font-size: 0.9rem;
+ color: #7a7a7a;
+ margin-bottom: 2rem;
+ }
+ .blog-meta span {
+ display: flex;
+ align-items: center;
+ gap: 0.3rem;
+ }
+ .featured-image {
+ width: 100%;
+ height: 420px;
+ background: linear-gradient(135deg, #d4c9b0 0%, #c4b89a 100%);
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ margin-bottom: 2.5rem;
+ border-radius: 8px;
+ color: #faf8f5;
+ font-size: 1.2rem;
+ letter-spacing: 0.1em;
+ }
+ .blog-content {
+ max-width: 780px;
+ margin: 0 auto;
+ }
+ .blog-content blockquote {
+ border-left: 4px solid #8b7a5a;
+ padding: 1rem 1.5rem;
+ margin: 1.5rem 0;
+ background: #f0ece4;
+ font-style: italic;
+ color: #3a3a3a;
+ }
+ .blog-content ul {
+ margin: 1rem 0 1.5rem 2rem;
+ list-style-type: square;
+ }
+ .blog-content li {
+ margin-bottom: 0.6rem;
+ font-size: 1.05rem;
+ }
+ .blog-footer {
+ margin-top: 3rem;
+ padding-top: 2rem;
+ border-top: 1px solid #e8e0d0;
+ text-align: center;
+ color: #7a7a7a;
+ font-size: 0.9rem;
+ }
+ </style>
+  <meta property="og:url" content="https://kyoto-travel-local.pbn-builder.xyz/blog.html">
+  <meta property="og:description" content="교토 사원 전문가가 전하는 깊이 있는 블로그. 금각사와 청수사의 건축 미학, 용안사의 선종 철학, 교토 사원 방문의 최적 시기와 숨은 명소를 권위 있는 시각으로 해설합니다.">
+  <meta name="twitter:card" content="summary">
 </head>
 <body>
-    <header>
-        <div class="header-inner">
-            <a href="/" class="site-title">Kyoto Temple Guide</a>
-            <button class="hamburger-menu" aria-label="메뉴 열기" onclick="document.querySelector('nav').classList.toggle('active')">☰</button>
-            <nav>
-                <a href="/">홈</a>
-                <a href="/temples">사원 소개</a>
-                <a href="/blog" style="color:#8b7a5a;">블로그</a>
-                <a href="/about">소개</a>
-                <a href="/contact" class="tel-link">문의하기</a>
-            </nav>
-        </div>
-    </header>
+ <header>
+ <div class="header-inner">
+ <a href="/" class="site-title">Kyoto Temple Guide</a>
+ <button class="hamburger-menu" aria-label="메뉴 열기" onclick="document.querySelector('nav').classList.toggle('active')">☰</button>
+ <nav>
+ <a href="/">홈</a>
+ <a href="/temples">사원 소개</a>
+ <a href="/blog" style="color:#8b7a5a;">블로그</a>
+ <a href="/about">소개</a>
+ <a href="/contact" class="tel-link">문의하기</a>
+ </nav>
+ </div>
+ </header>
 
 <main>
 <article class="container">

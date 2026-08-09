@@ -1,278 +1,277 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>정보 - Kyoto Temple 안내 | 교토 사원 완전 정복</title>
-    <meta name="description" content="교토 사원에 대한 모든 정보를 한곳에 모았어. 브로가 직접 조사한 사원별 특징, 입장료, 가는 법, 꿀팁까지. 지금 확인하고 교토 여행 계획 완성하자!">
-    <meta name="keywords" content="Kyoto temple 정보, 교토 사원 입장료, 교토 사원 가는 법, 교토 사원 추천, 교토 사원 특징, 교토 여행 정보">
-    <link rel="canonical" href="https://kyoto-travel-local.pbn-builder.xyz/about.html">
-    <!-- 브루탈리스트 디자인 시스템 -->
-    <meta name="bpaas-design-system" content="brutalist-avantgarde">
-    <meta name="bpaas-design-theme" content="kr-raw-concrete">
-    <!-- OG 메타 -->
-    <meta property="og:title" content="정보 - Kyoto Temple 안내 | 교토 사원 완전 정복">
-    <meta property="og:description" content="교토 사원에 대한 모든 정보. 입장료, 가는 법, 꿀팁까지 브로가 다 알려준다.">
-    <meta property="og:url" content="https://kyoto-travel-local.pbn-builder.xyz/about.html">
-    <meta property="og:type" content="website">
-    <style>
-        /* ===== RESET & BASE ===== */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        html {
-            font-size: 16px;
-            scroll-behavior: smooth;
-        }
-        body {
-            font-family: 'Courier New', Courier, monospace;
-            background-color: #f5f0e8;
-            color: #1a1a1a;
-            line-height: 1.6;
-            padding: 0 20px;
-        }
-        /* ===== 컨테이너 ===== */
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 20px 0;
-        }
-        /* ===== TYPOGRAPHY ===== */
-        h1, h2, h3, h4 {
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-        h1 {
-            font-size: 3rem;
-            margin-bottom: 0.5rem;
-            border-bottom: 4px solid #ff4444;
-            display: inline-block;
-        }
-        h2 {
-            font-size: 2.2rem;
-            margin-top: 2rem;
-            margin-bottom: 1rem;
-            border-left: 8px solid #ff4444;
-            padding-left: 15px;
-        }
-        h3 {
-            font-size: 1.6rem;
-            margin-top: 1.5rem;
-            margin-bottom: 0.5rem;
-        }
-        p {
-            margin-bottom: 1rem;
-            font-size: 1.1rem;
-        }
-        a {
-            color: #ff4444;
-            text-decoration: underline;
-            font-weight: bold;
-        }
-        a:hover {
-            background-color: #ff4444;
-            color: #fff;
-            text-decoration: none;
-        }
-        strong {
-            background-color: #ffeb3b;
-            padding: 0 4px;
-        }
-        /* ===== BRUTALIST RAW TEXTURE ===== */
-        .texture-bg {
-            background: repeating-linear-gradient(
-                45deg,
-                #dcdcdc,
-                #dcdcdc 2px,
-                #f5f0e8 2px,
-                #f5f0e8 6px
-            );
-            padding: 30px;
-            border: 4px solid #1a1a1a;
-            box-shadow: 8px 8px 0 #1a1a1a;
-            margin-bottom: 2rem;
-        }
-        /* ===== NAVIGATION ===== */
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 0;
-            border-bottom: 4px solid #1a1a1a;
-            margin-bottom: 2rem;
-        }
-        nav .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-        }
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 20px;
-        }
-        nav ul li a {
-            text-decoration: none;
-            color: #1a1a1a;
-            font-weight: bold;
-            text-transform: uppercase;
-            padding: 5px 10px;
-            border: 2px solid transparent;
-        }
-        nav ul li a:hover {
-            border-color: #ff4444;
-            background-color: transparent;
-            color: #ff4444;
-        }
-        /* ===== CARD ===== */
-        .card {
-            background-color: #fff;
-            border: 4px solid #1a1a1a;
-            padding: 20px;
-            margin-bottom: 1.5rem;
-            box-shadow: 6px 6px 0 #1a1a1a;
-        }
-        .card h3 {
-            margin-top: 0;
-        }
-        /* ===== FAQ ===== */
-        .faq-item {
-            border-bottom: 2px solid #1a1a1a;
-            padding: 15px 0;
-        }
-        .faq-question {
-            font-weight: bold;
-            font-size: 1.2rem;
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-        }
-        .faq-answer {
-            margin-top: 10px;
-            padding-left: 20px;
-        }
-        /* ===== RESPONSIVE 768 ===== */
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 2rem;
-            }
-            h2 {
-                font-size: 1.6rem;
-            }
-            nav {
-                flex-direction: column;
-                gap: 10px;
-            }
-            nav ul {
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-            .texture-bg {
-                padding: 20px;
-            }
-        }
-    </style>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>정보 - Kyoto Temple 안내 | 교토 사원 완전 정복</title>
+ <meta name="description" content="교토 사원에 대한 모든 정보를 한곳에 모았어. 브로가 직접 조사한 사원별 특징, 입장료, 가는 법, 꿀팁까지. 지금 확인하고 교토 여행 계획 완성하자!">
+ <meta name="keywords" content="Kyoto temple 정보, 교토 사원 입장료, 교토 사원 가는 법, 교토 사원 추천, 교토 사원 특징, 교토 여행 정보">
+ <link rel="canonical" href="https://kyoto-travel-local.pbn-builder.xyz/about.html">
+ <!-- 브루탈리스트 디자인 시스템 -->
+ <!-- OG 메타 -->
+ <meta property="og:title" content="정보 - Kyoto Temple 안내 | 교토 사원 완전 정복">
+ <meta property="og:description" content="교토 사원에 대한 모든 정보를 한곳에 모았어. 브로가 직접 조사한 사원별 특징, 입장료, 가는 법, 꿀팁까지. 지금 확인하고 교토 여행 계획 완성하자!">
+ <meta property="og:url" content="https://kyoto-travel-local.pbn-builder.xyz/about.html">
+ <meta property="og:type" content="website">
+ <style>
+ /* ===== RESET & BASE ===== */
+ * {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ }
+ html {
+ font-size: 16px;
+ scroll-behavior: smooth;
+ }
+ body {
+ font-family: 'Courier New', Courier, monospace;
+ background-color: #f5f0e8;
+ color: #1a1a1a;
+ line-height: 1.6;
+ padding: 0 20px;
+ }
+ /* ===== 컨테이너 ===== */
+ .container {
+ max-width: 1100px;
+ margin: 0 auto;
+ padding: 20px 0;
+ }
+ /* ===== TYPOGRAPHY ===== */
+ h1, h2, h3, h4 {
+ font-weight: bold;
+ text-transform: uppercase;
+ letter-spacing: 2px;
+ }
+ h1 {
+ font-size: 3rem;
+ margin-bottom: 0.5rem;
+ border-bottom: 4px solid #ff4444;
+ display: inline-block;
+ }
+ h2 {
+ font-size: 2.2rem;
+ margin-top: 2rem;
+ margin-bottom: 1rem;
+ border-left: 8px solid #ff4444;
+ padding-left: 15px;
+ }
+ h3 {
+ font-size: 1.6rem;
+ margin-top: 1.5rem;
+ margin-bottom: 0.5rem;
+ }
+ p {
+ margin-bottom: 1rem;
+ font-size: 1.1rem;
+ }
+ a {
+ color: #ff4444;
+ text-decoration: underline;
+ font-weight: bold;
+ }
+ a:hover {
+ background-color: #ff4444;
+ color: #fff;
+ text-decoration: none;
+ }
+ strong {
+ background-color: #ffeb3b;
+ padding: 0 4px;
+ }
+ /* ===== BRUTALIST RAW TEXTURE ===== */
+ .texture-bg {
+ background: repeating-linear-gradient(
+ 45deg,
+ #dcdcdc,
+ #dcdcdc 2px,
+ #f5f0e8 2px,
+ #f5f0e8 6px
+ );
+ padding: 30px;
+ border: 4px solid #1a1a1a;
+ box-shadow: 8px 8px 0 #1a1a1a;
+ margin-bottom: 2rem;
+ }
+ /* ===== NAVIGATION ===== */
+ nav {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ padding: 20px 0;
+ border-bottom: 4px solid #1a1a1a;
+ margin-bottom: 2rem;
+ }
+ nav .logo {
+ font-size: 1.5rem;
+ font-weight: bold;
+ text-transform: uppercase;
+ letter-spacing: 3px;
+ }
+ nav ul {
+ display: flex;
+ list-style: none;
+ gap: 20px;
+ }
+ nav ul li a {
+ text-decoration: none;
+ color: #1a1a1a;
+ font-weight: bold;
+ text-transform: uppercase;
+ padding: 5px 10px;
+ border: 2px solid transparent;
+ }
+ nav ul li a:hover {
+ border-color: #ff4444;
+ background-color: transparent;
+ color: #ff4444;
+ }
+ /* ===== CARD ===== */
+ .card {
+ background-color: #fff;
+ border: 4px solid #1a1a1a;
+ padding: 20px;
+ margin-bottom: 1.5rem;
+ box-shadow: 6px 6px 0 #1a1a1a;
+ }
+ .card h3 {
+ margin-top: 0;
+ }
+ /* ===== FAQ ===== */
+ .faq-item {
+ border-bottom: 2px solid #1a1a1a;
+ padding: 15px 0;
+ }
+ .faq-question {
+ font-weight: bold;
+ font-size: 1.2rem;
+ cursor: pointer;
+ display: flex;
+ justify-content: space-between;
+ }
+ .faq-answer {
+ margin-top: 10px;
+ padding-left: 20px;
+ }
+ /* ===== RESPONSIVE 768 ===== */
+ @media (max-width: 768px) {
+ h1 {
+ font-size: 2rem;
+ }
+ h2 {
+ font-size: 1.6rem;
+ }
+ nav {
+ flex-direction: column;
+ gap: 10px;
+ }
+ nav ul {
+ flex-wrap: wrap;
+ justify-content: center;
+ }
+ .texture-bg {
+ padding: 20px;
+ }
+ }
+ </style>
+  <meta name="twitter:card" content="summary">
 </head>
 <body>
-    <div class="container">
-        <!-- 네비게이션 -->
-        <nav>
-            <div class="logo">🏯 KYOTO TEMPLE</div>
-            <ul>
-                <li><a href="/">홈</a></li>
-                <li><a href="/info">정보</a></li>
-                <li><a href="/spots">명소</a></li>
-                <li><a href="/food">맛집</a></li>
-            </ul>
-        </nav>
+ <div class="container">
+ <!-- 네비게이션 -->
+ <nav>
+ <div class="logo">🏯 KYOTO TEMPLE</div>
+ <ul>
+ <li><a href="/">홈</a></li>
+ <li><a href="/info">정보</a></li>
+ <li><a href="/spots">명소</a></li>
+ <li><a href="/food">맛집</a></li>
+ </ul>
+ </nav>
 
-        <!-- 메인 콘텐츠 -->
-        <h1>정보</h1>
-        <p class="texture-bg" style="font-weight: bold; font-size: 1.3rem;">
-            야, 드디어 왔구나! 브로가 교토 사원에 대한 <strong>모든 정보</strong>를 다 모아놨어. 
-            입장료, 가는 법, 개장 시간, 꿀팁까지 싹 다 털어가라고. 🙌
-        </p>
+ <!-- 메인 콘텐츠 -->
+ <h1>정보</h1>
+ <p class="texture-bg" style="font-weight: bold; font-size: 1.3rem;">
+ 야, 드디어 왔구나! 브로가 교토 사원에 대한 <strong>모든 정보</strong>를 다 모아놨어. 
+ 입장료, 가는 법, 개장 시간, 꿀팁까지 싹 다 털어가라고. 🙌
+ </p>
 
-        <!-- 상세 정보 섹션 -->
-        <section>
-            <h2>📍 대표 사원 정보</h2>
-            <div class="card">
-                <h3>🟢 키요미즈데라 (清水寺)</h3>
-                <p><strong>입장료:</strong> 성인 400엔, 학생 200엔</p>
-                <p><strong>개장 시간:</strong> 06:00 ~ 18:00 (계절에 따라 변동)</p>
-                <p><strong>가는 법:</strong> 교토역에서 버스 100, 206번 타고 '키요미즈미치' 하차, 도보 10분</p>
-                <p><strong>브로 팁:</strong> 해질녘에 가면 무대 위에서 보는 석양이 진짜 레전드야. 인생샷 명소니까 카메라 꼭 챙겨!</p>
-            </div>
-            <div class="card">
-                <h3>🟠 킨카쿠지 (金閣寺)</h3>
-                <p><strong>입장료:</strong> 성인 400엔, 어린이 200엔</p>
-                <p><strong>개장 시간:</strong> 09:00 ~ 17:00</p>
-                <p><strong>가는 법:</strong> 교토역에서 버스 101, 205번 타고 '킨카쿠지마에' 하차</p>
-                <p><strong>브로 팁:</strong> 금색 건물이 햇빛에 반짝이는 모습이 장난 아냐. 오전 9-10시에 가면 사람도 적고 빛도 좋아!</p>
-            </div>
-            <div class="card">
-                <h3>🔴 후시미 이나리타이샤 (伏見稲荷大社)</h3>
-                <p><strong>입장료:</strong> 무료!</p>
-                <p><strong>개장 시간:</strong> 항상 개방 (신사 사무소는 09:00 ~ 16:30)</p>
-                <p><strong>가는 법:</strong> JR 교토역에서 나라선 타고 '이나리'역 하차, 도보 1분</p>
-                <p><strong>브로 팁:</strong> 천 개의 붉은 토리이가 유명한데, 위쪽으로 올라가면 사람이 거의 없어. 등산 코스니까 편한 신발 신어!</p>
-            </div>
-        </section>
+ <!-- 상세 정보 섹션 -->
+ <section>
+ <h2>📍 대표 사원 정보</h2>
+ <div class="card">
+ <h3>🟢 키요미즈데라 (清水寺)</h3>
+ <p><strong>입장료:</strong> 성인 400엔, 학생 200엔</p>
+ <p><strong>개장 시간:</strong> 06:00 ~ 18:00 (계절에 따라 변동)</p>
+ <p><strong>가는 법:</strong> 교토역에서 버스 100, 206번 타고 '키요미즈미치' 하차, 도보 10분</p>
+ <p><strong>브로 팁:</strong> 해질녘에 가면 무대 위에서 보는 석양이 진짜 레전드야. 인생샷 명소니까 카메라 꼭 챙겨!</p>
+ </div>
+ <div class="card">
+ <h3>🟠 킨카쿠지 (金閣寺)</h3>
+ <p><strong>입장료:</strong> 성인 400엔, 어린이 200엔</p>
+ <p><strong>개장 시간:</strong> 09:00 ~ 17:00</p>
+ <p><strong>가는 법:</strong> 교토역에서 버스 101, 205번 타고 '킨카쿠지마에' 하차</p>
+ <p><strong>브로 팁:</strong> 금색 건물이 햇빛에 반짝이는 모습이 장난 아냐. 오전 9-10시에 가면 사람도 적고 빛도 좋아!</p>
+ </div>
+ <div class="card">
+ <h3>🔴 후시미 이나리타이샤 (伏見稲荷大社)</h3>
+ <p><strong>입장료:</strong> 무료!</p>
+ <p><strong>개장 시간:</strong> 항상 개방 (신사 사무소는 09:00 ~ 16:30)</p>
+ <p><strong>가는 법:</strong> JR 교토역에서 나라선 타고 '이나리'역 하차, 도보 1분</p>
+ <p><strong>브로 팁:</strong> 천 개의 붉은 토리이가 유명한데, 위쪽으로 올라가면 사람이 거의 없어. 등산 코스니까 편한 신발 신어!</p>
+ </div>
+ </section>
 
-        <!-- 지역 시그널 섹션 -->
-        <section>
-            <h2>🗺️ 교토 지역 꿀팁</h2>
-            <div class="texture-bg">
-                <p><strong>교토는 버스가 짱!</strong> 지하철보다 버스 노선이 훨씬 다양해. 하루 승차권(600엔) 사면 세 번 이상 탈 때 이득이야.</p>
-                <p><strong>한국인 관광객 많으니까 너무 걱정 마</strong> – 교토역 앞 관광안내소에서 한국어 지도도 줌. 그리고 대부분 사원에 한글 팜플렛 있어.</p>
-                <p><strong>성수기(봄/가을)에는 사원 입장에 30분~1시간 줄 서는 곳도 있어.</strong> 오픈런 각오하고 일찍 가는 게 답이다.</p>
-            </div>
-        </section>
+ <!-- 지역 시그널 섹션 -->
+ <section>
+ <h2>🗺️ 교토 지역 꿀팁</h2>
+ <div class="texture-bg">
+ <p><strong>교토는 버스가 짱!</strong> 지하철보다 버스 노선이 훨씬 다양해. 하루 승차권(600엔) 사면 세 번 이상 탈 때 이득이야.</p>
+ <p><strong>한국인 관광객 많으니까 너무 걱정 마</strong> – 교토역 앞 관광안내소에서 한국어 지도도 줌. 그리고 대부분 사원에 한글 팜플렛 있어.</p>
+ <p><strong>성수기(봄/가을)에는 사원 입장에 30분~1시간 줄 서는 곳도 있어.</strong> 오픈런 각오하고 일찍 가는 게 답이다.</p>
+ </div>
+ </section>
 
-        <!-- FAQ 섹션 -->
-        <section>
-            <h2>❓ 자주 묻는 질문</h2>
-            <div class="faq-item">
-                <div class="faq-question">사원 입장할 때 복장 규정 있어?</div>
-                <div class="faq-answer">딱히 없어! 하지만 절 내부는 신성한 곳이니까 너무 과한 노출은 피하는 게 좋아. 어깨 가리는 얇은 겉옷 하나 챙겨가면 만사 오케이.</div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-question">사찰 내부에서 사진 찍어도 돼?</div>
-                <div class="faq-answer">대부분 외부는 OK, 내부는 금지인 경우가 많아. 각 사원마다 표시가 있으니까 확인하고 찍어. 근데 킨카쿠지는 외부만 찍어도 인생샷 나와!</div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-question">현금만 받는 곳 있어?</div>
-                <div class="faq-answer">오, 그거 중요해! 많은 사원이 입장료는 현금만 받아. 가방에 1~2만 엔 정도 현금 넣어 다녀. 가끔 카드 되는 곳도 있는데 믿지 마.</div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-question">절에서 절까지 도보로 이동 가능해?</div>
-                <div class="faq-answer">가까운 곳끼리는 걸어다닐 만해 (예: 키요미즈데라 → 야사카 신사). 하지만 동쪽/서쪽 떨어진 곳은 버스 타야 해. 하루 3~4개 사원이 적당함.</div>
-            </div>
-        </section>
+ <!-- FAQ 섹션 -->
+ <section>
+ <h2>❓ 자주 묻는 질문</h2>
+ <div class="faq-item">
+ <div class="faq-question">사원 입장할 때 복장 규정 있어?</div>
+ <div class="faq-answer">딱히 없어! 하지만 절 내부는 신성한 곳이니까 너무 과한 노출은 피하는 게 좋아. 어깨 가리는 얇은 겉옷 하나 챙겨가면 만사 오케이.</div>
+ </div>
+ <div class="faq-item">
+ <div class="faq-question">사찰 내부에서 사진 찍어도 돼?</div>
+ <div class="faq-answer">대부분 외부는 OK, 내부는 금지인 경우가 많아. 각 사원마다 표시가 있으니까 확인하고 찍어. 근데 킨카쿠지는 외부만 찍어도 인생샷 나와!</div>
+ </div>
+ <div class="faq-item">
+ <div class="faq-question">현금만 받는 곳 있어?</div>
+ <div class="faq-answer">오, 그거 중요해! 많은 사원이 입장료는 현금만 받아. 가방에 1~2만 엔 정도 현금 넣어 다녀. 가끔 카드 되는 곳도 있는데 믿지 마.</div>
+ </div>
+ <div class="faq-item">
+ <div class="faq-question">절에서 절까지 도보로 이동 가능해?</div>
+ <div class="faq-answer">가까운 곳끼리는 걸어다닐 만해 (예: 키요미즈데라 → 야사카 신사). 하지만 동쪽/서쪽 떨어진 곳은 버스 타야 해. 하루 3~4개 사원이 적당함.</div>
+ </div>
+ </section>
 
-        <!-- 푸터 -->
-        <footer style="margin-top: 3rem; border-top: 4px solid #1a1a1a; padding: 20px 0; text-align: center;">
-            <p>© 2025 KYOTO TEMPLE BRO 가이드 | 문의: <a href="mailto:bro@kyoto-temple.vercel.app">bro@kyoto-temple.vercel.app</a></p>
-            <p>이 페이지는 브루탈리즘 디자인을 기반으로 만들어졌어. 궁금한 거 있으면 언제든 물어보셈!</p>
-        </footer>
-    </div>
+ <!-- 푸터 -->
+ <footer style="margin-top: 3rem; border-top: 4px solid #1a1a1a; padding: 20px 0; text-align: center;">
+ <p>© 2025 KYOTO TEMPLE BRO 가이드 | 문의: <a href="mailto:bro@kyoto-temple.vercel.app">bro@kyoto-temple.vercel.app</a></p>
+ <p>이 페이지는 브루탈리즘 디자인을 기반으로 만들어졌어. 궁금한 거 있으면 언제든 물어보셈!</p>
+ </footer>
+ </div>
 
-    <!-- 간단한 FAQ 토글 스크립트 (선택사항) -->
-    <script>
-        document.querySelectorAll('.faq-question').forEach(item => {
-            item.addEventListener('click', () => {
-                const answer = item.nextElementSibling;
-                if (answer.style.display === 'block') {
-                    answer.style.display = 'none';
-                } else {
-                    answer.style.display = 'block';
-                }
-            });
-        });
-    </script>
+ <!-- 간단한 FAQ 토글 스크립트 (선택사항) -->
+ <script>
+ document.querySelectorAll('.faq-question').forEach(item => {
+ item.addEventListener('click', () => {
+ const answer = item.nextElementSibling;
+ if (answer.style.display === 'block') {
+ answer.style.display = 'none';
+ } else {
+ answer.style.display = 'block';
+ }
+ });
+ });
+ </script>
 </body>
 </html>
