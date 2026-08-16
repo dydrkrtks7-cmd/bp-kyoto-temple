@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>글 목록 (2/2) · kyoto-temple</title>
+  <meta name="description" content="kyoto-temple에 올라온 글 목록입니다.">
+  <link rel="canonical" href="https://kyoto-travel-local.pbn-builder.xyz/posts-2.html">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <style>
+ *, *::before, *::after {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ }
+ html {
+ font-size: 16px;
+ scroll-behavior: smooth;
+ -webkit-font-smoothing: antialiased;
+ -moz-osx-font-smoothing: grayscale;
+ }
+ body {
+ font-family: 'Times New Roman', 'Noto Serif KR', Georgia, serif;
+ background-color: #faf8f5;
+ color: #2c2c2c;
+ line-height: 1.8;
+ padding-top: 80px;
+ }
+ h1, h2, h3, h4, h5, h6 {
+ font-family: 'Times New Roman', 'Noto Serif KR', Georgia, serif;
+ font-weight: 600;
+ letter-spacing: 0.02em;
+ color: #1a1a1a;
+ }
+ h1 {
+ font-size: 2.4rem;
+ line-height: 1.3;
+ margin-bottom: 1.5rem;
+ border-bottom: 2px solid #d4c9b0;
+ padding-bottom: 0.5rem;
+ }
+ h2 {
+ font-size: 1.8rem;
+ margin-top: 2.5rem;
+ margin-bottom: 1rem;
+ color: #3a3a3a;
+ }
+ h3 {
+ font-size: 1.3rem;
+ margin-top: 1.8rem;
+ margin-bottom: 0.8rem;
+ color: #4a4a4a;
+ }
+ p {
+ margin-bottom: 1.2rem;
+ font-size: 1.05rem;
+ }
+ a {
+ color: #8b7a5a;
+ text-decoration: none;
+ border-bottom: 1px solid transparent;
+ transition: border-color 0.3s ease, color 0.3s ease;
+ }
+ a:hover {
+ color: #5c4e36;
+ border-bottom-color: #5c4e36;
+ }
+ .container {
+ max-width: 1100px;
+ margin: 0 auto;
+ padding: 0 2rem;
+ }
+ header {
+ position: fixed;
+ top: 0;
+ left: 0;
+ width: 100%;
+ background: rgba(250, 248, 245, 0.97);
+ backdrop-filter: blur(10px);
+ -webkit-backdrop-filter: blur(10px);
+ border-bottom: 1px solid #e8e0d0;
+ z-index: 1000;
+ height: 80px;
+ }
+ .header-inner {
+ max-width: 1100px;
+ margin: 0 auto;
+ padding: 0 2rem;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ height: 100%;
+ }
+ .site-title {
+ font-size: 1.4rem;
+ font-weight: 600;
+ letter-spacing: 0.1em;
+ color: #1a1a1a;
+ text-decoration: none;
+ border-bottom: none;
+ }
+ .site-title:hover {
+ border-bottom: none;
+ color: #8b7a5a;
+ }
+ nav {
+ display: flex;
+ align-items: center;
+ gap: 2rem;
+ }
+ nav a {
+ font-size: 0.95rem;
+ font-weight: 500;
+ letter-spacing: 0.05em;
+ color: #3a3a3a;
+ text-decoration: none;
+ border-bottom: none;
+ padding: 0.3rem 0;
+ position: relative;
+ transition: color 0.3s ease;
+ }
+ nav a::after {
+ content: '';
+ position: absolute;
+ bottom: 0;
+ left: 0;
+ width: 0;
+ height: 2px;
+ background: #8b7a5a;
+ transition: width 0.3s ease;
+ }
+ nav a:hover {
+ color: #8b7a5a;
+ border-bottom: none;
+ }
+ nav a:hover::after {
+ width: 100%;
+ }
+ .hamburger-menu {
+ display: none;
+ background: none;
+ border: none;
+ font-size: 1.8rem;
+ cursor: pointer;
+ color: #2c2c2c;
+ padding: 0.3rem;
+ line-height: 1;
+ }
+ .tel-link {
+ display: inline-block;
+ padding: 0.4rem 1.2rem;
+ background: #8b7a5a;
+ color: #faf8f5;
+ border-radius: 4px;
+ font-size: 0.9rem;
+ font-weight: 500;
+ letter-spacing: 0.03em;
+ transition: background 0.3s ease;
+ text-decoration: none;
+ border-bottom: none;
+ }
+ .tel-link:hover {
+ background: #5c4e36;
+ color: #faf8f5;
+ border-bottom: none;
+ }
+ @media (max-width: 768px) {
+ body {
+ padding-top: 70px;
+ }
+ header {
+ height: 70px;
+ }
+ .header-inner {
+ padding: 0 1.2rem;
+ }
+ .site-title {
+ font-size: 1.2rem;
+ }
+ nav {
+ display: none;
+ position: absolute;
+ top: 70px;
+ left: 0;
+ width: 100%;
+ background: rgba(250, 248, 245, 0.99);
+ flex-direction: column;
+ padding: 1.5rem 1.2rem;
+ gap: 1rem;
+ border-bottom: 1px solid #e8e0d0;
+ box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+ }
+ nav.active {
+ display: flex;
+ }
+ nav a {
+ font-size: 1rem;
+ padding: 0.5rem 0;
+ }
+ .hamburger-menu {
+ display: block;
+ }
+ .tel-link {
+ display: none;
+ }
+ .container {
+ padding: 0 1.2rem;
+ }
+ h1 {
+ font-size: 1.8rem;
+ }
+ h2 {
+ font-size: 1.4rem;
+ }
+ }
+ .blog-header {
+ margin: 3rem 0 2rem;
+ text-align: center;
+ }
+ .blog-header p {
+ font-size: 1.1rem;
+ color: #5c5c5c;
+ max-width: 700px;
+ margin: 0 auto;
+ }
+ .blog-meta {
+ display: flex;
+ justify-content: center;
+ gap: 2rem;
+ font-size: 0.9rem;
+ color: #7a7a7a;
+ margin-bottom: 2rem;
+ }
+ .blog-meta span {
+ display: flex;
+ align-items: center;
+ gap: 0.3rem;
+ }
+ .featured-image {
+ width: 100%;
+ height: 420px;
+ background: linear-gradient(135deg, #d4c9b0 0%, #c4b89a 100%);
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ margin-bottom: 2.5rem;
+ border-radius: 8px;
+ color: #faf8f5;
+ font-size: 1.2rem;
+ letter-spacing: 0.1em;
+ }
+ .blog-content {
+ max-width: 780px;
+ margin: 0 auto;
+ }
+ .blog-content blockquote {
+ border-left: 4px solid #8b7a5a;
+ padding: 1rem 1.5rem;
+ margin: 1.5rem 0;
+ background: #f0ece4;
+ font-style: italic;
+ color: #3a3a3a;
+ }
+ .blog-content ul {
+ margin: 1rem 0 1.5rem 2rem;
+ list-style-type: square;
+ }
+ .blog-content li {
+ margin-bottom: 0.6rem;
+ font-size: 1.05rem;
+ }
+ .blog-footer {
+ margin-top: 3rem;
+ padding-top: 2rem;
+ border-top: 1px solid #e8e0d0;
+ text-align: center;
+ color: #7a7a7a;
+ font-size: 0.9rem;
+ }
+ </style>
+  <meta property="og:title" content="글 목록 (2/2) · kyoto-temple">
+  <meta property="og:description" content="kyoto-temple에 올라온 글 목록입니다.">
+  <meta property="og:url" content="https://kyoto-travel-local.pbn-builder.xyz/posts-2.html">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+</head>
+<body>
+  <div class="container">
+    <header>
+ <div class="header-inner">
+ <a href="/" class="site-title">Kyoto Temple Guide</a>
+ <button class="hamburger-menu" aria-label="메뉴 열기" onclick="document.querySelector('nav').classList.toggle('active')">☰</button>
+ <nav>
+ <a href="/">홈</a>
+ <a href="/temples">사원 소개</a>
+ <a href="/blog" style="color:#8b7a5a;">블로그</a>
+ <a href="/about">소개</a>
+ <a href="/contact" class="tel-link">문의하기</a>
+ </nav>
+ </div>
+ </header>
+    <main>
+      <h1>글 목록</h1>
+      <p>전체 29개 · 2/2 페이지</p>
+      <ul class="post-list">
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0027.html">Kyoto temple 안내 수준의 공덕 가라오케 추천정보 가이드</a>
+        <p class="post-item__summary">성공적인 모임을 위해서는 장소 선택에 앞서 필요한 충족 조건을 명확히 설정해야 합니다. Kyoto temple 안내를 확인하며 동선을 짜는 여행객처럼, 공덕 지역의 가라오케를 찾을 때도 규모와 음향</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0028.html">Kyoto temple 안내 이상의 가치를 지닌 상수 마사지 추천정보</a>
+        <p class="post-item__summary">여러분은 몸이 무거워질 때 어디에서 휴식을 취하며 피로를 풀어내고 있습니까? 마치 Kyoto temple 안내를 통해 마음의 안식을 찾을 장소를 고민하듯, 신체의 피로를 덜어낼 장소를 고르는 것 역</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0029.html">Kyoto temple 안내를 통해 알아보는 망원 노래방 추천정보</a>
+        <p class="post-item__summary">오래된 사찰을 방문할 때 Kyoto temple 안내를 참고하여 동선을 짜듯, 즐거운 시간을 보낼 노래방을 고를 때도 체계적인 절차가 필요합니다. 특히 망원 지역은 다양한 유흥 시설이 밀집해 있어 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0030.html">Kyoto temple 안내 기반 홍대 노래방 추천정보 분석</a>
+        <p class="post-item__summary">교토의 사찰인 Kyoto temple 안내를 읽고 명소를 고르듯, 홍대 지역의 수많은 노래방 중 한곳을 택하는 일은 신중해야 합니다. 이용객들은 흔히 대형 프랜차이즈와 개인 운영 매장이라는 두 가지</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0031.html">Kyoto temple 안내 보듯 공덕 셔츠룸 추천정보 확인</a>
+        <p class="post-item__summary">Kyoto temple 안내 책자를 꼼꼼히 살피지 않고 무작정 사찰을 방문하면 낭패를 보듯, 공덕 셔츠룸 이용 시에도 사전 확인이 필수적입니다. 많은 이용자가 예약을 시도하다가 실패하는 주된 이유는</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0032.html">Kyoto temple 안내와 연남 유흥 추천정보 확인법</a>
+        <p class="post-item__summary">교토 여행 중 Kyoto temple 안내를 통해 길을 찾듯이, 연남 지역에서 유흥 시설을 방문할 때도 위치 파악은 안전의 기본입니다. 특히 밤늦은 시간 이동이 잦은 유흥 문화의 특성상 지하철역이나</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0033.html">Kyoto temple 안내 및 마곡 가라오케 추천정보 활용 가이드</a>
+        <p class="post-item__summary">낯선 여행지에서 목적지를 찾지 못해 헤매던 경험은 누구나 한 번쯤 겪게 되는 당혹스러운 상황입니다. 마치 Kyoto temple 안내 표지판이 보이지 않는 교외를 걷는 것처럼, 밤늦은 시간의 마곡지</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0150.html">Kyoto temple 안내 내용으로 알아보는 셔츠룸 예약 시 가격 판단 기준</a>
+        <p class="post-item__summary">여행지에서 Kyoto temple 안내 책자를 보고 동선을 짜는 과정과 밤 문화를 위해 업소를 선택하는 과정은 상당히 닮아 있습니다. 관광객들은 검증된 장소를 찾기 위해 정보를 비교하며, 그 과정에</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0151.html">Kyoto temple 안내 보듯 꼼꼼한 마포 셔츠룸 예약 시 눈탱이 피하는 법</a>
+        <p class="post-item__summary">관광객이 Kyoto temple 안내 정보를 찾아볼 때 가장 경계하는 것은 현지 분위기와 다른 낚시성 정보입니다. 마포 셔츠룸 예약 시 눈탱이 피하는 법 역시 이와 다르지 않으며, 실패하는 사람들은</p>
+      </li>
+      </ul>
+    <nav class="pager">
+      <a class="pager__link" href="posts.html">1</a>
+      <span class="pager__current">2</span>
+    </nav>
+    </main>
+  </div>
+</body>
+</html>
